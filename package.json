@@ -6,7 +6,7 @@
     "dev": "npx kill-port 8100 && npm run start:local",
     "build": "tsc && copyfiles -u 1 \"src/**/*.pug\" build && tsc-alias",
     "start:local": "nodemon --watch src --ext ts,js,json --exec \"npx ts-node --transpile-only src/server.ts\"",
-    "tscTest": "tsc --noEmit",
+    "test": "tsc --noEmit",
     "build:server": "npm install && tsc && start:server",
     "start:server": "node build/server.js"
   },
