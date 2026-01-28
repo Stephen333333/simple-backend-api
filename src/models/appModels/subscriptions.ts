@@ -38,6 +38,9 @@ schema.virtual("isActive").get(function (this: ISubscription) {
   return this.startDate <= now && now <= this.endDate;
 });
 
+schema.set("toJSON", { virtuals: true });
+schema.set("toObject", { virtuals: true });
+
 schema.plugin(require("mongoose-autopopulate"));
 export const Subscription: Model<ISubscription> = mongoose.model<ISubscription>(
   "Subscription",
