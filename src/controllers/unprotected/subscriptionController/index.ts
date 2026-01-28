@@ -1,4 +1,4 @@
-import { Reservation as Model } from "@/models";
+import { Subscription as Model } from "@/models";
 import { ISubscription } from "@/types";
 import { create } from "./create";
 import { update } from "./update";
