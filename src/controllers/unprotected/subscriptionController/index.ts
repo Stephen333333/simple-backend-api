@@ -1,22 +1,18 @@
 import { Reservation as Model } from "@/models";
-import { Ireservation } from "@/types";
+import { ISubscription } from "@/types";
 import { create } from "./create";
 import { update } from "./update";
 import { remove } from "./remove";
 import { read } from "./read";
 
-export const reservationController = (() => {
+export const subscriptionController = (() => {
   
-  const allowedFields: (keyof Ireservation)[] = [
-    "customerName",
-    "customerPhone",
-    "customerEmail",
-    "restaurantId",
-    "tableId",
-    "status",
-    "startTime",
-    "endTime",
-    "partySize",
+  const allowedFields: (keyof ISubscription)[] = [
+    "name",
+    "email",
+    "plan",
+    "startDate",
+    "endDate",
   ];
 
   return {
